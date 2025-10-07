@@ -1,7 +1,7 @@
 function p4 () {
-    story.printCharacterText("En el cuento, ¿qué representa el motivo del objeto inanimado que cobra vida?", "profesor")
-    story.showPlayerChoices("A) La imposibilidad de cambiar la realidad", "B) La ausencia de memoria del personaje", "C) La subjetividad de la realidad y la imaginación", "D) La superioridad científica")
-    if (story.checkLastAnswer("C) La subjetividad de la realidad y la imaginación")) {
+    story.printCharacterText("Es un recurso ultilizado para embellecer los textos", "profesor")
+    story.showPlayerChoices("A)Recursos Literarios", "B) La ausencia de memoria del personaje", "C)Recursos de indignacion", "D)Recursos de embellecimiento")
+    if (story.checkLastAnswer("A)Recursos Literarios")) {
         music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.InBackground)
         story.printCharacterText("buena respuesta", "profesor")
     } else {
@@ -11,9 +11,9 @@ function p4 () {
     }
 }
 function p1 () {
-    story.printCharacterText("¿Cuál es el rasgo característico del realismo literario?", "profesor")
-    story.showPlayerChoices("A) Visión idealizada de la sociedad", "B) Enfoque en lo cotidiano y lo social", "C) Uso exclusivo de metáforas y fantasía", "D) Narradores poco confiables")
-    if (story.checkLastAnswer("B) Enfoque en lo cotidiano y lo social")) {
+    story.printCharacterText("Tipos de Textos Literarios", "profesor")
+    story.showPlayerChoices("A) Lirico,Narrativo,Teatral", "B)Lirico,Narrativo,Dramatico", "C)Lirico,Narrador,Dramatico", "Largos y cortos")
+    if (story.checkLastAnswer("B)Lirico,Narrativo,Dramatico")) {
         music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.InBackground)
         story.printCharacterText("has acertado", "profesor")
     } else {
@@ -24,8 +24,8 @@ function p1 () {
 }
 function p2 () {
     story.printCharacterText("En la poesía, ¿qué función cumple la rima asonante?", "profesor")
-    story.showPlayerChoices("A) Coinciden todos los sonidos de las palabras", "B) Solo coinciden las vocales finales acentuadas", "C) No hay coincidencia de sonidos", "D) Se repiten consonantes al final de verso")
-    if (story.checkLastAnswer("B) Solo coinciden las vocales finales acentuadas")) {
+    story.showPlayerChoices("A) Coinciden todos los sonidos de las palabras", "B)No tiene ninguna funcion", "C) Solo coinciden las vocales finales acentuadas", "D) Se repiten consonantes al final de verso")
+    if (story.checkLastAnswer("C) Solo coinciden las vocales finales acentuadas")) {
         music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.InBackground)
         story.printCharacterText("buena respuesta", "profesor")
     } else {
@@ -35,9 +35,9 @@ function p2 () {
     }
 }
 function p5 () {
-    story.printCharacterText("¿Cuál de las siguientes opciones describe mejor la función del narrador omnisciente?", "profesor")
-    story.showPlayerChoices("A) Limita la información al personaje principal", "B) Conoce todos los pensamientos y detalles de todos los personajes", "C) Solo relata acciones sin acceso a pensamientos", "D) Presenta hechos en orden temporal invertido")
-    if (story.checkLastAnswer("B) Conoce todos los pensamientos y detalles de todos los personajes")) {
+    story.printCharacterText("Recurso literario encargado de hacer una comparacion sin utilizar \"como\"", "profesor")
+    story.showPlayerChoices("A) Simil", "B) Metafora", "C) HIperbaton", "D) Epiteto")
+    if (story.checkLastAnswer("B) Metafora")) {
         music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.InBackground)
         story.printCharacterText("buena respuesta", "profesor")
     } else {
@@ -47,11 +47,11 @@ function p5 () {
     }
 }
 function p3 () {
-    story.printCharacterText("¿Qué autor es conocido por su novela existencialista \"La náufraga\" (ejemplo hipotético para la pregunta)?", "profesor")
-    story.showPlayerChoices("A) Gabriel García Márquez", "B) Jean-Paul Sartre", "C) Jorge Luis Borges", "D) Isabel Allende")
-    if (story.checkLastAnswer("B) Jean-Paul Sartre")) {
+    story.printCharacterText("Recurso literario que sirve para simular sonidos o efectos de la vida cotidiana", "profesor")
+    story.showPlayerChoices("A)Hiperbole", "B)Sintaxis", "C)Lirico", "D) Onomatopeya")
+    if (story.checkLastAnswer("D)Onomatopeya")) {
         music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.InBackground)
-        story.printCharacterText("buena respuesta", "profesor")
+        story.printCharacterText("exelente sigue asi", "profesor")
     } else {
         music.play(music.melodyPlayable(music.wawawawaa), music.PlaybackMode.InBackground)
         story.printCharacterText("has fallado creo que si puedes mejorar", "profesor")
@@ -258,12 +258,12 @@ let mySprite = sprites.create(img`
     ...............cc...........................................ccccdddccccdccccc
     ...............................................................ccccc..ccc....
     `, SpriteKind.Player)
-story.printCharacterText("hola estudiantes bienvenidos a su prueba de textos literarios contesta bien ", "profesor")
+story.printCharacterText("hola estudiantes bienvenidos a su examen de 5 preguntas de textos literarios buena suerte :D", "profesor")
 info.setLife(3)
 p1()
 p2()
 p3()
 p4()
 p5()
-story.printCharacterText("has ganado")
+story.printCharacterText("han pasado su examen de figuras literarias")
 game.gameOver(true)
